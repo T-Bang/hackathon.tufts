@@ -1,4 +1,35 @@
+<!DOCTYPE html>
 <html>
-
-
+<head>
+    <link href="style.css" rel="stylesheet">
+    
+<!-- Bootstrap -->
+    <link href="bootstrap-3.3.2-dist/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="bootstrap-3.3.2-dist/css/bootstrap-theme.css.map" rel="stylesheet">
+    <link href="bootstrap-3.3.2-dist/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="bootstrap-3.3.2-dist/css/bootstrap.css" rel="stylesheet">
+    <link href="bootstrap-3.3.2-dist/css/bootstrap.css.map" rel="stylesheet">
+    <link href="bootstrap-3.3.2-dist/css/bootstrap.min.css" rel="stylesheet">
+<!---- Google Map API --->
+    
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+<script>
+function initialize() {
+  var mapProp = {
+    center:new google.maps.LatLng(51.508742,-0.120850),
+    zoom:2,
+    mapTypeId:google.maps.MapTypeId.ROADMAP  
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+</head>
+<p id="first" class="hidden-xs"> Peace Corps</p>
+    
+<body>
+    <div id="googleMap" style="width:800px;height:500px;"></div>
+    
+    
+</body>
 </html>
